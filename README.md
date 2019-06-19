@@ -1,6 +1,8 @@
 # @puthnith/eslint-config-dust
 
-> The simplest ESLint configuration
+[![npm version](https://badge.fury.io/js/%40puthnith%2Feslint-config-dust.svg)](https://badge.fury.io/js/%40puthnith%2Feslint-config-dust)
+
+> The simplest ESLint configuration integrated with Prettier
 
 Install [TypeScript](https://www.npmjs.com/package/typescript), [ESLint](https://www.npmjs.com/package/eslint) and [this](https://www.npmjs.com/package/@puthnith/eslint-config-dust) packages
 
