@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/puthnith/hello-node#readme",
   "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "main": "index.js",
   "files": [
     "index.js",
