@@ -4,56 +4,64 @@
 
 > The simplest ESLint configuration integrated with Prettier
 
-Install [TypeScript](https://www.npmjs.com/package/typescript), [ESLint](https://www.npmjs.com/package/eslint) and [this](https://www.npmjs.com/package/@puthnith/eslint-config-dust) packages
+## Peer Dependencies
+
+This package requires [`typescript`](https://www.npmjs.com/package/typescript) (`^3.x`) and [`eslint`](https://www.npmjs.com/package/eslint) (`^7.x`).
+
+## Setup
+
+1. Install this package and its dependencies
 
 ```
 npm i --save-dev typescript eslint @puthnith/eslint-config-dust
 ```
 
-And extend it in your `.eslintrc.json`
+2. Add it to your `.eslintrc.json` or `package.json`
 
 ```json
 { "extends": "@puthnith/dust" }
 ```
 
-## Visual Studio Code
-
-Install [microsoft/vscode-eslint](https://github.com/Microsoft/vscode-eslint) and [prettier/prettier-vscode](https://github.com/prettier/prettier-vscode) extensions
-
-This can be set globally or in your project `./.vscode/settings.json`
-
 ```json
-{
-  "javascript.format.enable": false,
-  "typescript.format.enable": false,
-
-  "eslint.enable": true,
-
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true
-  },
-  "prettier.eslintIntegration": true,
-  "eslint.autoFixOnSave": true,
-  "eslint.validate": ["javascript", { "language": "typescript", "autoFix": true }]
-}
+{ "eslintConfig": { "extends": "@puthnith/dust" } }
 ```
 
-## Tips
+### Vscode
 
-If you just want `eslint` and `prettier` extensions to work without any `.eslintrc.*` in your project, add this to the global `settings.json`.
-
-(You don't need this _eslint_config_)
+If you use **vscode**, you may want to fix the code on save. This requires two extensions, [microsoft/vscode-eslint](https://github.com/Microsoft/vscode-eslint) and [prettier/prettier-vscode](https://github.com/prettier/prettier-vscode). After you have the extensions, you can add the below configuration to your global or local settings (`.vscode/settings.json`).
 
 ```json
 {
-  "eslint.options": {
-    "parserOptions": {
-      "ecmaVersion": 2019,
-      "sourceType": "module"
-    },
-    "env": {
-      "es6": true
-    }
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   }
 }
 ```
+
+If you use `prettier`, you may want to config in the settings.
+
+```json
+{
+  "prettier.printWidth": 120,
+  "prettier.semi": false,
+  "prettier.singleQuote": false,
+  "prettier.tabWidth": 2,
+  "prettier.trailingComma": "all"
+}
+```
+
+If you don't want to pollute your settings, you can add this to your project, `package.json` or `.prettierrc`.
+
+```json
+{
+  "prettier": {
+    "printWidth": 120,
+    "semi": false,
+    "singleQuote": false,
+    "tabWidth": 2,
+    "trailingComma": "all"
+  }
+}
+```
+
+Check out [puthnith/hello-node](https://github.com/puthnith/hello-node) for a project template using this package.

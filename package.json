@@ -1,14 +1,21 @@
 {
   "name": "@puthnith/eslint-config-dust",
-  "version": "1.0.1",
-  "description": "The simplest ESLint configuration",
+  "version": "1.2.0",
+  "description": "The simplest ESLint configuration integrated with Prettier",
   "author": "Puthnith Var",
   "keywords": [
     "linting",
     "eslint",
     "dust"
   ],
-  "repository": "github:puthnith/eslint-config-dust",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/puthnith/eslint-config-dust.git"
+  },
+  "bugs": {
+    "url": "https://github.com/puthnith/hello-node/issues"
+  },
+  "homepage": "https://github.com/puthnith/hello-node#readme",
   "license": "MIT",
   "main": "index.js",
   "files": [
@@ -16,19 +23,20 @@
     "README.md"
   ],
   "peerDependencies": {
-    "eslint": "^5.x",
+    "eslint": "^7.x",
     "typescript": "^3.x"
   },
   "devDependencies": {
-    "eslint": "^5.16.0",
-    "typescript": "^3.5.2"
+    "eslint": "^7.4.0",
+    "typescript": "^3.9.6"
   },
   "dependencies": {
-    "@typescript-eslint/eslint-plugin": "^1.10.2",
-    "@typescript-eslint/parser": "^1.10.2",
-    "eslint-config-prettier": "^5.0.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "eslint-plugin-simple-import-sort": "^4.0.0",
+    "@typescript-eslint/eslint-plugin": "^3.6.0",
+    "@typescript-eslint/parser": "^3.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-simple-import-sort": "^5.0.3",
     "prettier": "^1.18.2"
   }
 }
